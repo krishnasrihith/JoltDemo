@@ -1,0 +1,58 @@
+{
+  "mandapalli": [
+    {
+      "operation": "shift",
+      "spec": {
+        "rating": {
+          "primary": {
+            "value": "Rating"
+          },
+          "*": {
+            "value": "SecondaryRatings.&1.Value",
+            "$": "SecondaryRatings.&.Id"
+          }
+        }
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "Range": 5,
+        "SecondaryRatings": {
+          "*": {
+            "Range": 5
+          }
+        }
+      }
+    }
+  ],
+  "arpit": [
+    {
+      "operation": "shift",
+      "spec": {
+        "rating": {
+          "primary": {
+            "value": "NewValue"
+          },
+          "*": {
+            "value": "newobject.&1.value",
+            "$": "newobject.&1.ID"
+          }
+        }
+      }
+    },
+    {
+      "operation": "cardinality",
+      "spec": {
+        "newobject": {
+          "third": {
+            "value": "ONE"
+          },
+          "quality": {
+            "value": "MANY"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "rating": {
+    "primary": {
+      "value": 3
+    },
+    "quality": {
+      "value": 4
+    },
+    "third": {
+      "value": [
+        5,
+        4,
+        3
+      ]
+    }
+  }
+}
